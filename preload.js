@@ -37,6 +37,8 @@ window.exports = {
         })
       },
       search: (action, searchWord, callbackSetList) => {
+        if (!searchWord.trim().length) return
+
         if (isFirstSearch) {
           setList(searchWord, callbackSetList)
           isFirstSearch = false
@@ -45,7 +47,9 @@ window.exports = {
         }
       },
       select: (action, itemData, callbackSetList) => {
-        utools.copyText(itemData?.title?.toLocaleLowerCase())
+        if (itemData?.title) {
+          utools.copyText(itemData.title.toLocaleLowerCase())
+        }
         utools.hideMainWindow()
         utools.outPlugin()
       },
