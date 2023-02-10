@@ -1,0 +1,16 @@
+{
+  "logo": "logo.png",
+  "preload": "preload.js",
+  "features": [
+    {
+      "code": "abbreviation",
+      "explain": "英文缩写查询",
+      "cmds": [
+        {
+          "type": "over",
+          "label": "英文缩写查询"
+        }
+      ]
+    }
+  ]
+}
